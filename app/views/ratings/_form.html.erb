@@ -1,0 +1,53 @@
+<%= form_for(@rating) do |f| %>
+  <% if @rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rating.errors.count, "error") %> prohibited this rating from being saved:</h2>
+
+      <ul>
+      <% @rating.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :beer_name %><br>
+    <%= f.text_field :beer_name %>
+  </div>
+  <div class="field">
+    <%= f.label :hoppy %><br>
+    <%= f.text_field :hoppy %>
+  </div>
+  <div class="field">
+    <%= f.label :malty %><br>
+    <%= f.text_field :malty %>
+  </div>
+  <div class="field">
+    <%= f.label :crisp %><br>
+    <%= f.text_field :crisp %>
+  </div>
+  <div class="field">
+    <%= f.label :fruity %><br>
+    <%= f.text_field :fruity %>
+  </div>
+  <div class="field">
+    <%= f.label :funky %><br>
+    <%= f.text_field :funky %>
+  </div>
+  <div class="field">
+    <%= f.label :roasted %><br>
+    <%= f.text_field :roasted %>
+  </div>
+  <div class="field">
+    <%= f.label :smoky %><br>
+    <%= f.text_field :smoky %>
+  </div>
+  <div class="field">
+    <%= f.label :rating_date %><br>
+    <%= f.date_select :rating_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

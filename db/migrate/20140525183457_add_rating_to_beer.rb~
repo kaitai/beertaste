@@ -1,0 +1,8 @@
+class AddRatingToBeer < ActiveRecord::Migration
+  def change
+    add_column :beers, :add_column, :string
+    add_column :beers, :, :ratings,
+    add_column :beers, :, :beer_id,
+    add_column :beers, :, :reference
+  end
+end

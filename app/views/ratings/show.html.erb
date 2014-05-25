@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Beer name:</strong>
+  <%= @rating.beer_name %>
+</p>
+
+<p>
+  <strong>Hoppy:</strong>
+  <%= @rating.hoppy %>
+</p>
+
+<p>
+  <strong>Malty:</strong>
+  <%= @rating.malty %>
+</p>
+
+<p>
+  <strong>Crisp:</strong>
+  <%= @rating.crisp %>
+</p>
+
+<p>
+  <strong>Fruity:</strong>
+  <%= @rating.fruity %>
+</p>
+
+<p>
+  <strong>Funky:</strong>
+  <%= @rating.funky %>
+</p>
+
+<p>
+  <strong>Roasted:</strong>
+  <%= @rating.roasted %>
+</p>
+
+<p>
+  <strong>Smoky:</strong>
+  <%= @rating.smoky %>
+</p>
+
+<p>
+  <strong>Rating date:</strong>
+  <%= @rating.rating_date %>
+</p>
+
+<%= link_to 'Edit', edit_rating_path(@rating) %> |
+<%= link_to 'Back', ratings_path %>
+<%= link_to "Beers", beers_path(@beers) %>
+<%= link_to "Homepage", homepage_path(@show) %>

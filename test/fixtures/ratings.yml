@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  beer_name: MyString
+  hoppy: 1.5
+  malty: 1.5
+  crisp: 1.5
+  fruity: 1.5
+  funky: 1.5
+  roasted: 1.5
+  smoky: 1.5
+  rating_date: 2014-05-25
+
+two:
+  beer_name: MyString
+  hoppy: 1.5
+  malty: 1.5
+  crisp: 1.5
+  fruity: 1.5
+  funky: 1.5
+  roasted: 1.5
+  smoky: 1.5
+  rating_date: 2014-05-25
