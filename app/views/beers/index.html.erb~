@@ -27,5 +27,3 @@
 <br>
 
 <%= link_to 'New Beer', new_beer_path %>
-<%= link_to "Ratings", ratings_path(@ratings) %>
-<%= link_to "Homepage", root_path %>

@@ -47,3 +47,5 @@
 
 <%= link_to 'Edit', edit_rating_path(@rating) %> |
 <%= link_to 'Back', ratings_path %>
+<%= link_to "Beers", beers_path(@beers) %>
+<%= link_to "Homepage", homepage_path(@show) %>
