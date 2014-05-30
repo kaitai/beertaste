@@ -1,4 +1,6 @@
 Beertaste::Application.routes.draw do
+  resources :breweries
+
   get "homepage/show"
   root 'homepage#show'
   resources :beers
