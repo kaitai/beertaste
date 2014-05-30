@@ -17,31 +17,31 @@
   </div>
   <div class="field">
     <%= f.label :hoppy %><br>
-    <%= f.range_field :hoppy, :min=>0, :max=>5, :class=>"slide" %>
+    <%= f.text_field :hoppy %>
   </div>
   <div class="field">
     <%= f.label :malty %><br>
-    <%= f.range_field :malty, :min=>0, :max=>5, :class=>"slide" %>
+    <%= f.text_field :malty %>
   </div>
   <div class="field">
     <%= f.label :crisp %><br>
-    <%= f.range_field :crisp, :min=>0, :max=>5, :class=>"slide" %>
+    <%= f.text_field :crisp %>
   </div>
   <div class="field">
     <%= f.label :fruity %><br>
-    <%= f.range_field :fruity, :min=>0, :max=>5, :class=>"slide" %>
+    <%= f.text_field :fruity %>
   </div>
   <div class="field">
     <%= f.label :funky %><br>
-    <%= f.range_field :funky, :min=>0, :max=>5, :class=>"slide" %>
+    <%= f.text_field :funky %>
   </div>
   <div class="field">
     <%= f.label :roasted %><br>
-    <%= f.range_field :roasted, :min=>0, :max=>5, :class=>"slide" %>
+    <%= f.text_field :roasted %>
   </div>
   <div class="field">
     <%= f.label :smoky %><br>
-    <%= f.range_field :smoky, :min=>0, :max=>5, :class=>"slide" %>
+    <%= f.text_field :smoky %>
   </div>
   <div class="field">
     <%= f.label :rating_date %><br>
