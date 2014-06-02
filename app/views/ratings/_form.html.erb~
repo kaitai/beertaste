@@ -13,35 +13,35 @@
 
   <div class="field">
     <%= f.label :beer_name %><br>
-    <%= f.text_field :beer_name %>
+    <%= collection_select :name, :beer_id, Beer.all.order(:name), :id, :name, {}, {size: 10, data: {select: :name} } %>
   </div>
   <div class="field">
     <%= f.label :hoppy %><br>
-    <%= f.text_field :hoppy %>
+    <%= f.range_field :hoppy, :min=>0, :max=>5, :class=>"slide" %>
   </div>
   <div class="field">
     <%= f.label :malty %><br>
-    <%= f.text_field :malty %>
+    <%= f.range_field :malty, :min=>0, :max=>5, :class=>"slide" %>
   </div>
   <div class="field">
     <%= f.label :crisp %><br>
-    <%= f.text_field :crisp %>
+    <%= f.range_field :crisp, :min=>0, :max=>5, :class=>"slide" %>
   </div>
   <div class="field">
     <%= f.label :fruity %><br>
-    <%= f.text_field :fruity %>
+    <%= f.range_field :fruity, :min=>0, :max=>5, :class=>"slide" %>
   </div>
   <div class="field">
     <%= f.label :funky %><br>
-    <%= f.text_field :funky %>
+    <%= f.range_field :funky, :min=>0, :max=>5, :class=>"slide" %>
   </div>
   <div class="field">
     <%= f.label :roasted %><br>
-    <%= f.text_field :roasted %>
+    <%= f.range_field :roasted, :min=>0, :max=>5, :class=>"slide" %>
   </div>
   <div class="field">
     <%= f.label :smoky %><br>
-    <%= f.text_field :smoky %>
+    <%= f.range_field :smoky, :min=>0, :max=>5, :class=>"slide" %>
   </div>
   <div class="field">
     <%= f.label :rating_date %><br>

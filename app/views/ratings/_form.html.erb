@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :beer_name %><br>
-    <%= f.text_field :beer_name %>
+    <%= collection_select :name, :beer_id, Beer.all.order(:name), :id, :name, {}, {size: 10, data: {select: :name} } %>
   </div>
   <div class="field">
     <%= f.label :hoppy %><br>
