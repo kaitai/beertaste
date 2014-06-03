@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140530225114) do
+ActiveRecord::Schema.define(version: 20140603204806) do
 
   create_table "beers", force: true do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140530225114) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "add_column"
+    t.integer  "beer_id"
   end
 
 end

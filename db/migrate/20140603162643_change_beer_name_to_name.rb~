@@ -1,0 +1,5 @@
+class ChangeBeerNameToName < ActiveRecord::Migration
+  def change
+    rename_column :beer_name, :name, :string
+  end
+end

@@ -1,9 +1,14 @@
 Beertaste::Application.routes.draw do
-  resources :breweries
+  resources :breweries do
+    member do
+      get 'beers'
+    end
+  end
 
   get "homepage/show"
   root 'homepage#show'
   resources :beers
+
   resources :ratings
 
   # The priority is based upon order of creation: first created -> highest priority.
