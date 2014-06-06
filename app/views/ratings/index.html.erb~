@@ -21,7 +21,7 @@
   <tbody>
     <% @ratings.each do |rating| %>
       <tr>
-        <td><%= rating.beer_name %></td>
+        <td><%= rating.beer_id %></td>
         <td><%= rating.hoppy %></td>
         <td><%= rating.malty %></td>
         <td><%= rating.crisp %></td>
@@ -41,3 +41,5 @@
 <br>
 
 <%= link_to 'New Rating', new_rating_path %>
+<%= link_to "Beers", beers_path(@beers) %>
+<%= link_to "Homepage", root_path(@root) %>
