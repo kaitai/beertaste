@@ -25,3 +25,5 @@
 <br>
 
 <%= link_to 'New Brewery', new_brewery_path %>
+<%= link_to 'Ratings', ratings_path(@ratings) %>
+<%= link_to 'Beers', beers_path(@beers) %>
