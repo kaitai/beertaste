@@ -1,0 +1,5 @@
+class RenameBreweryNameToName < ActiveRecord::Migration
+  def change
+    rename_column :brewery, :brewery_name, :name
+  end
+end

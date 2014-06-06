@@ -11,24 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603204806) do
+ActiveRecord::Schema.define(version: 20140606182111) do
 
   create_table "beers", force: true do |t|
     t.string   "name"
     t.string   "style"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "brewery"
+    t.string   "brewery_id"
   end
 
   create_table "breweries", force: true do |t|
-    t.string   "brewery_name"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "ratings", force: true do |t|
-    t.string   "beer_name"
+    t.string   "name"
     t.float    "hoppy"
     t.float    "malty"
     t.float    "crisp"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20140603204806) do
     t.date     "rating_date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "add_column"
     t.integer  "beer_id"
   end
 

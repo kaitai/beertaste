@@ -1,0 +1,4 @@
+class RenameBreweryToBreweryId < ActiveRecord::Migration
+  def change
+  end
+end
