@@ -21,7 +21,7 @@
   <tbody>
     <% @ratings.each do |rating| %>
       <tr>
-        <td><%= rating.beer.name %></td>
+        <td><%= rating.beer %></td>
         <td><%= rating.hoppy %></td>
         <td><%= rating.malty %></td>
         <td><%= rating.crisp %></td>

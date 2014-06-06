@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :beer_name %><br>
+    <%= f.label :name %><br>
     <%= collection_select :rating, :beer_id, Beer.all.order(:name), :id, :name, {}, {size: 10, data: {select: :beer} } %>
   </div>
   <div class="field">

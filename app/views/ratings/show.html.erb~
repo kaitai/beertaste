@@ -2,7 +2,7 @@
 
 <p>
   <strong>Beer name:</strong>
-  <%= @rating.beer_name %>
+  <%= @rating.beer_id %>
 </p>
 
 <p>

@@ -70,6 +70,6 @@ class RatingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rating_params
-      params.require(:rating).permit(:beer_name, :beer_id, :hoppy, :malty, :crisp, :fruity, :funky, :roasted, :smoky, :rating_date)
+      params.require(:rating).permit(:name, :beer_id, :hoppy, :malty, :crisp, :fruity, :funky, :roasted, :smoky, :rating_date)
     end
 end
