@@ -52,3 +52,6 @@ gem 'rails_layout'
 group :assets do
   gem 'jquery-ui-rails'
 end
+
+# Trying Chartkick in this branch
+gem 'chartkick'
