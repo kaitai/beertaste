@@ -1,8 +1,21 @@
 <h1>The Beer Data Collector, version 1</h1>
 <p>Attempt one for domination of beer data science.</p>
 
-<%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
 
+<div class="text-center">Average Maltiness</div>
+<%= column_chart Rating.group(:name).average(:malty) %>
+<div class="text-center">Average Hoppiness</div>
+<%= column_chart Rating.group(:name).average(:hoppy) %>
+<div class="text-center">Average Crispness</div>
+<%= column_chart Rating.group(:name).average(:crisp) %>
+<div class="text-center">Average Fruitiness</div>
+<%= column_chart Rating.group(:name).average(:fruity) %>
+<div class="text-center">Average Funkiness</div>
+<%= column_chart Rating.group(:name).average(:funky) %>
+<div class="text-center">Average Roastiness</div>
+<%= column_chart Rating.group(:name).average(:roasted) %>
+<div class="text-center">Average Smokiness</div>
+<%= column_chart Rating.group(:name).average(:smoky) %>
 <%= link_to "Ratings", ratings_path(@ratings) %>
 <%= link_to "Beers", beers_path(@beers) %>
 <%= link_to "Breweries", breweries_path(@breweries) %>
