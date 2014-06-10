@@ -3,19 +3,19 @@
 
 
 <div class="text-center">Average Maltiness</div>
-<%= column_chart Rating.group(:name).average(:malty) %>
+<%= column_chart Rating.group(:beer_id).average(:malty), {height: "200px", width: "300px"} %>
 <div class="text-center">Average Hoppiness</div>
-<%= column_chart Rating.group(:name).average(:hoppy) %>
+<%= column_chart Rating.group(:beer_id).average(:hoppy) %>
 <div class="text-center">Average Crispness</div>
-<%= column_chart Rating.group(:name).average(:crisp) %>
+<%= column_chart Rating.group(:beer_id).average(:crisp) %>
 <div class="text-center">Average Fruitiness</div>
-<%= column_chart Rating.group(:name).average(:fruity) %>
+<%= column_chart Rating.group(:beer_id).average(:fruity) %>
 <div class="text-center">Average Funkiness</div>
-<%= column_chart Rating.group(:name).average(:funky) %>
+<%= column_chart Rating.group(:beer_id).average(:funky) %>
 <div class="text-center">Average Roastiness</div>
-<%= column_chart Rating.group(:name).average(:roasted) %>
+<%= column_chart Rating.group(:beer_id).average(:roasted) %>
 <div class="text-center">Average Smokiness</div>
-<%= column_chart Rating.group(:name).average(:smoky) %>
+<%= column_chart Rating.group(:beer_id).average(:smoky) %>
 <%= link_to "Ratings", ratings_path(@ratings) %>
 <%= link_to "Beers", beers_path(@beers) %>
 <%= link_to "Breweries", breweries_path(@breweries) %>
