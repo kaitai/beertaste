@@ -54,4 +54,4 @@ group :assets do
 end
 
 # Trying Chartkick in this branch
-gem 'chartkick'
+gem 'chartkick', :path => "/Users/kaisa/workshpace/chartkick"
