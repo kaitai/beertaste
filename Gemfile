@@ -52,3 +52,6 @@ gem 'rails_layout'
 group :assets do
   gem 'jquery-ui-rails'
 end
+
+# add a d3 gem
+gem 'd3_rails'
