@@ -1,6 +1,58 @@
 <h1>The Beer Data Collector, version 1</h1>
 <p>Attempt one for domination of beer data science.</p>
 
+<svg width="60" height="85"> 
+
+<rect x="5" y="10" width="50" height="75" fill="yellow" stroke="orange" stroke-width="5"/>
+<rect x="5" y="0" width="50" height="20" fill="white"/>
+</svg>
+
+<br>
+
+    <script type="text/javascript">
+     //my beautiful d3 code will go here!
+     // giving it a go
+     // try to read in json
+     //d3.json("/ratings.json", function(json) {
+     //  console.log(data);
+     //});
+     // set width and height
+     var w = 500;
+     var h = 100;
+     //var dataset = [[10,12],[30,40],[77,77]];
+     var jsonCircles = [{"x_axis": 30,
+                         "y_axis": 30,
+                         "radius": 20,
+                         "color" : "green"
+                         }, {
+                         "x_axis": 40,
+                         "y_axis": 40,
+                         "radius": 25,
+                         "color" : "purple"
+                         }];
+     // create the SVG element
+     var svg = d3.select("body")
+                 .append("svg")
+                 .attr("width", w)
+                 .attr("height", h);
+     svg.selectAll("circle")
+        .data(jsonCircles)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d) {
+           return d.x_axis;
+           })
+        .attr("cy", function(d) {
+           return d.y_axis;
+           })
+        .attr("r", function(d) {
+           return d.radius;
+           })
+        .attr("fill", function(d) {
+           return d.color;
+           });
+    </script>
+
 
 <%= link_to "Ratings", ratings_path(@ratings) %>
 <%= link_to "Beers", beers_path(@beers) %>

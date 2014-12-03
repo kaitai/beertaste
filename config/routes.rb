@@ -8,13 +8,9 @@ Beertaste::Application.routes.draw do
   get "homepage/show"
   root 'homepage#show'
   resources :beers
+  resources :ratings 
+  get "ratings/get_data"
 
-  resources :ratings
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
 

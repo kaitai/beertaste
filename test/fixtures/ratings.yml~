@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  beer_name: MyString
   hoppy: 1.5
   malty: 1.5
   crisp: 1.5
@@ -12,7 +12,7 @@ one:
   rating_date: 2014-05-25
 
 two:
-  name: MyString
+  beer_name: MyString
   hoppy: 1.5
   malty: 1.5
   crisp: 1.5
