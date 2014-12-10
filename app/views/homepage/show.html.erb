@@ -17,41 +17,52 @@
        console.log(json);
      // set width and height
      var w = 500;
-     var h = 100;
+     var h = 500;
      if (error) return console.warn(error);
      data = json;
-     //var dataset = [[10,12],[30,40],[77,77]];
-//     var jsonCircles = [{"x_axis": 30,
-//                         "y_axis": 30,
-//                         "radius": 20,
-//                         "color" : "green"
-//                         }, {
-//                         "x_axis": 40,
-//                         "y_axis": 40,
-//                         "radius": 25,
-//                         "color" : "purple"
-//                         }];
      // create the SVG element
      var svg = d3.select("body")
                  .append("svg")
                  .attr("width", w)
                  .attr("height", h);
+     var padding = 20;
+     var xScale = d3.scale.linear()
+                    .domain([0,6])
+                    .range([padding,w-padding]);
+     var yScale = d3.scale.linear()
+                    .domain([0,6])
+                    .range([h-padding,padding]);
      svg.selectAll("circle")
         .data(data)
         .enter()
         .append("circle")
         .attr("cx", function(d) {
-           return d.malty*10;
+           return xScale(d.malty);
            })
         .attr("cy", function(d) {
-           return d.hoppy*10;
+           return yScale(d.hoppy);
            })
         .attr("r", function(d) {
            return d.crisp;
            })
-//        .attr("fill", function(d) {
-//           return d.color;
-//           });
+        .attr("fill", function(d) {
+           return d.color;
+           });
+     var xAxis = d3.svg.axis()
+                       .scale(xScale)
+                       .orient("bottom");
+     var yAxis = d3.svg.axis()
+                       .scale(yScale)
+                       .orient("left")
+                       .ticks(5);
+     svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + (h-padding) + ")")
+        .call(xAxis);
+     svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(" + padding + ",0)")
+        .call(yAxis);
      });
 
     </script>
